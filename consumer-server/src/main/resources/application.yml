@@ -21,19 +21,6 @@ spring:
 registry:
   host: localhost
   port: 31091
-  
-  
 
-
----
-spring:
-  profiles: test
-  mvc: 
-    date-format: yyyy-MM-dd
-    
-registry:
-  host: localhost
-  port: 31091
-  
 
  
