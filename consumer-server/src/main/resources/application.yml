@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: "dev"
+  application:
+    name: consumer-server
+    
+server:
+  port: 8325
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://${registry.host:localhost}:${registry.port:8761}/eureka/
+
+---
+spring:
+  profiles: dev
+
+registry:
+  host: localhost
+  port: 31091
+  
+  
+
+
+---
+spring:
+  profiles: test
+  mvc: 
+    date-format: yyyy-MM-dd
+    
+registry:
+  host: localhost
+  port: 31091
+  
+
+ 
